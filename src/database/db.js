@@ -1,10 +1,11 @@
+
 const mongoose = require('mongoose')
 
 function connect() {
     mongoose.set('useNewUrlParser', true)
     mongoose.set('useUnifiedTopology', true)
 
-    mongoose.connect('mongodb://localhost:27017/api-trequinhos?readPreference=primary&appname=MongoDB%20Compass&ssl=false')
+    mongoose.connect(process.env.database || 'mongodb://localhost:27017/api-trequinhos?readPreference=primary&appname=MongoDB%20Compass&ssl=false')
 
     const db = mongoose.connection
 
