@@ -11,9 +11,7 @@ const app = express()
 db.connect()
 
 //habilita CORS
-app.use(cors({
-    origin:'https://trequinhos.vercel.app/'
-}))
+app.use(cors({}))
 /*Quando quiser especificar o endereço que pode consultar a api
 app.use(cors({
     origin:'endereço'
